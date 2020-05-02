@@ -1,24 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Person from './Person/Person'
 
 function App() {
+  state = {
+    persons: [
+      {name: 'Max', age: 28},
+      {name: 'Khairul', age: 25},
+      {name: 'Stephanie', age: 24},
+    ]
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Hi, I`m a React App</h1>
+      <p>This is really working!</p>
+      <Person name={this.state.persons[0].name} age={this.state.persons[0].age}/>
+      <Person name={this.state.persons[1].name} age={this.state.persons[1].age}>My Hobies is fishing</Person>
+      <Person name={this.state.persons[2].name} age={this.state.persons[2].age}/>
     </div>
   );
 }
